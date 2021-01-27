@@ -83,11 +83,12 @@
         }
         $("#sub").on('click', function() {
             pro().then(function(val) {
-                $("#r2").show();
+               
                 // console.log(val);
                 if (val == 3) {
                     alert("Please enter value first");
                 } else if (val == 2) {
+                     $("#r2").show();
                     $("#score").text("number match " + val);
                     alert("Game Over !");
                     $("#r2").hide();
@@ -95,6 +96,7 @@
                     $("#sa").show();
                     location.reload();
                 } else {
+                     $("#r2").show();
                     $("#score").text("number did not match " + val);
                 }
             }).catch(function() {
